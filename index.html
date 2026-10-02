@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sekolah Superman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- KEPALA (NAVBAR) -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Sekolah" class="logo-img">
+            <span class="logo-text">SUPERMAN!!</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="berita.html">Berita & Info</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO POSTER (Efek scroll ala editorial poster) -->
+       <!-- HERO POSTER (Efek scroll ala editorial poster) -->
+    <section class="hero-poster-track" id="heroPosterTrack">
+        
+        <!-- TAMBAHKAN INI: Pembungkus Panggung -->
+        <div class="hero-poster-frame">
+            
+            <div class="hero-scene">
+                <!-- Gambar belakang: Bulan -->
+                <img src="bg-sekolah.jpg" alt="Latar Bulan" class="hero-scene-img">
+                <div class="hero-scene-noise"></div>
+                <h1 class="hero-fit-title" id="heroTitle">SUPERMAN</h1>
+                
+                <!-- Gambar depan: Kucing Selfie -->
+                <img src="kucing.png" alt="Karakter Depan" class="hero-foreground">
+            </div>
+
+            <div class="hero-copy" id="heroCopy">
+                <div class="hero-keywords">
+                    <span>Kuat</span>
+                    <span>Berani</span>
+                    <span>Pahlawan</span>
+                </div>
+                <h2 class="hero-headline">Penerimaan Superhero Baru Telah Dibuka</h2>
+                <p class="hero-body">Segera daftarkan diri Anda untuk mendapatkan pelatihan terbaik dengan fasilitas yang memadai.</p>
+                <a href="#" class="tombol-daftar">Join Sekarang</a>
+                <div class="hero-footer-line">
+                    <span>SUPERMAN!!</span>
+                    <span>Angkatan 2026</span>
+                    <span>27 Sep 2026</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- TUTUP PEMBUNGKUS DI SINI -->
+
+    </section>
+
+    <!-- KARTU MISI -->
+    <section class="misi" id="misi" data-aos="fade-up">
+        <h2 class="judul-misi">Chose your role hero</h2>
+        <div class="grid-misi">
+            <div class="kartu" data-aos="fade-up" data-aos-delay="0">
+                <div class="ikon">💪</div>
+                <h3>tanker</h3>
+                <p>sebuah role dimana kamu punya power besar dan HP tinggi,tetapi mobilitas rendah.</p>
+            </div>
+            <div class="kartu" data-aos="fade-up" data-aos-delay="150">
+                <div class="ikon">🧠</div>
+                <h3>racon our tracker</h3>
+                <p>sebuah role dimana kamu punya kecerdasan IQ yang tinggi,di dukung dengan teknologi tinggi untuk menghack musuh.</p>
+            </div>
+            <div class="kartu" data-aos="fade-up" data-aos-delay="300">
+                <div class="ikon">🦸‍♂️</div>
+                <h3>fighter</h3>
+                <p>sebuah role dimana kamu punya strengh tinggi dan mobilitas tinggi tapi HP yang rendah,harus di dukung dengan support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-konten">
+            <div class="footer-kolom">
+                <h3>SUPERMAN!!</h3>
+                <p>Sekolah superhero terbaik untuk generasi masa depan yang kuat dan cerdas.</p>
+            </div>
+            <div class="footer-kolom">
+                <h3>Link Cepat</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                </ul>
+            </div>
+            <div class="footer-kolom">
+                <h3>Kontak Kami</h3>
+                <p>Email: info@superman.sch.id</p>
+                <p>Telp: 0812-3456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bawah">
+            <p>&copy; <span id="tahun"></span> Sekolah Superman. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Kembali ke atas">↑</button>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

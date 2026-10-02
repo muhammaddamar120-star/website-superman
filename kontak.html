@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontak - Sekolah Superman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- KEPALA (NAVBAR) -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Sekolah" class="logo-img">
+            <span class="logo-text">SUPERMAN!!</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="berita.html">Berita & Info</a></li>
+            <li><a href="kontak.html" class="active">Kontak Kami</a></li>
+        </ul>
+    </nav>
+
+    <!-- KONTEN KONTAK -->
+    <section class="halaman-kontak" data-aos="fade-up">
+        <h1>Hubungi Markas Kami</h1>
+        <p>Punya pertanyaan atau mau join pasukan? Kirim pesanmu di sini!</p>
+
+        <form id="formKontak" class="form-kontak" action="https://formspree.io/f/mgavqjjv" method="POST">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan namamu..." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+
+            <button type="submit" class="tombol-kirim">Kirim Pesan 🚀</button>
+        </form>
+
+        <!-- Pesan Sukses (Sembunyi dulu) -->
+        <div id="pesanSukses" class="pesan-sukses">
+            ✅ Pesanmu sudah terkirim ke markas! Kami akan segera membalas.
+        </div>
+    </section>
+
+    <!-- FOOTER (Kaki) -->
+    <footer class="footer">
+        <div class="footer-konten">
+            <div class="footer-kolom">
+                <h3>SUPERMAN!!</h3>
+                <p>Sekolah superhero terbaik untuk generasi masa depan yang kuat dan cerdas.</p>
+            </div>
+            <div class="footer-kolom">
+                <h3>Link Cepat</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                </ul>
+            </div>
+            <div class="footer-kolom">
+                <h3>Kontak Kami</h3>
+                <p>Email: info@superman.sch.id</p>
+                <p>Telp: 081385479201</p>
+            </div>
+        </div>
+        <div class="footer-bawah">
+            <p>&copy; <span id="tahun"></span> Sekolah Superman. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Kembali ke atas">↑</button>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
