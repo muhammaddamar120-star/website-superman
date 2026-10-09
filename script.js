@@ -195,6 +195,12 @@ const dataBerita = [
         judul: "2 pahlawah dan satu kendara goib!",
         cuplikan: "para pahlawan sawit bertarung demi mempertahankan lahan sawit mereka dari serangan monster."
     },
+    {
+        gambar: "pahlawan.png",
+        tanggal: "2 OKtober 2026",
+        judul: "para moster anti sawit berkeliaran",
+        cuplikan: "para pahlawan sawit bertarung demi mempertahankan lahan sawit mereka dari serangan monster anti sawit."
+    },
 ];
 
 // 2. Cari wadah kosongnya di HTML
