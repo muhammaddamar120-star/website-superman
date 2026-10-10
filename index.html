@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Sekolah Superman</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scenery.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -28,23 +29,46 @@
         </ul>
     </nav>
 
-    <!-- HERO POSTER (Efek scroll ala editorial poster) -->
-       <!-- HERO POSTER (Efek scroll ala editorial poster) -->
-    <section class="hero-poster-track" id="heroPosterTrack">
-        
-        <!-- TAMBAHKAN INI: Pembungkus Panggung -->
-        <div class="hero-poster-frame">
+     <!-- HERO SECTION: Gunung + Teks SUPERMAN (Gabungan) -->
+    <section class="scenery" aria-label="Hero Superman">
+        <div class="scenery-pin">
             
-            <div class="hero-scene">
-                <!-- Gambar belakang: Bulan -->
-                <img src="bg-sekolah.jpg" alt="Latar Bulan" class="hero-scene-img">
-                <div class="hero-scene-noise"></div>
-                <h1 class="hero-fit-title" id="heroTitle">SUPERMAN</h1>
-                
-                <!-- Gambar depan: Kucing Selfie -->
-                <img src="kucing.png" alt="Karakter Depan" class="hero-foreground">
-            </div>
+            <!-- SVG Pemandangan Gunung -->
+            <svg class="scenery-svg" viewBox="0 0 750 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gSiang" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#9c536b"/><stop offset=".55" stop-color="#e98a84"/><stop offset="1" stop-color="#ffcba6"/>
+                    </linearGradient>
+                    <linearGradient id="gMalam" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#090618"/><stop offset="1" stop-color="#3b1f5e"/>
+                    </linearGradient>
+                    <radialGradient id="gMatahari"><stop offset="0" stop-color="#fffbb0"/><stop offset=".7" stop-color="#ffe94a"/><stop offset="1" stop-color="#ffd21f"/></radialGradient>
+                    <g id="pine"><polygon points="20,0 34,36 6,36"/><polygon points="20,22 38,64 2,64"/><polygon points="20,48 42,96 -2,96"/><rect x="18" y="96" width="4" height="12"/></g>
+                    <path id="burung" d="M0 0 q6 -8 12 0 q6 -8 12 0 q-6 4 -12 4 q-6 0 -12 -4z"/>
+                </defs>
+                <rect id="langitSiang" width="750" height="500" fill="url(#gSiang)"/>
+                <rect id="langitMalam" width="750" height="500" fill="url(#gMalam)" opacity="0"/>
+                <g id="bintang" opacity="0"></g>
+                <g id="matahari"><circle r="70" fill="#fff3a0" opacity=".35"/><circle r="55" fill="url(#gMatahari)"/></g>
+                <g id="awan" fill="#fff" opacity=".9">
+                    <g transform="translate(560 120)"><ellipse rx="40" ry="11"/><ellipse cx="-14" cy="-8" rx="20" ry="11"/><ellipse cx="14" cy="-6" rx="16" ry="9"/></g>
+                    <g transform="translate(120 170)"><ellipse rx="34" ry="9"/><ellipse cx="-10" cy="-7" rx="16" ry="9"/></g>
+                    <g transform="translate(690 210)"><ellipse rx="30" ry="8"/><ellipse cx="8" cy="-6" rx="14" ry="8"/></g>
+                </g>
+                <g id="burungGrup" fill="#2a1f45">
+                    <use href="#burung" x="40" y="120"/><use href="#burung" x="80" y="90"/><use href="#burung" x="120" y="135"/><use href="#burung" x="70" y="160"/>
+                </g>
+                <path id="gunungBelakang" fill="#8a6e95" d="M0 330 L90 270 L170 320 L260 240 L370 330 L470 270 L560 330 L660 250 L750 310 V500 H0Z"/>
+                <g id="pinusBelakang" fill="#5a4a7e"><use href="#pine" transform="translate(20 330) scale(0.9)"/><use href="#pine" transform="translate(110 345) scale(0.8)"/><use href="#pine" transform="translate(210 335) scale(0.7)"/><use href="#pine" transform="translate(300 350) scale(0.6)"/><use href="#pine" transform="translate(450 350) scale(0.6)"/><use href="#pine" transform="translate(540 335) scale(0.8)"/><use href="#pine" transform="translate(640 345) scale(0.9)"/><use href="#pine" transform="translate(710 330) scale(0.8)"/></g>
+                <path id="gunungTengah" fill="#433d6c" d="M0 380 L120 310 L230 370 L340 300 L450 380 L560 320 L670 385 L750 340 V500 H0Z"/>
+                <path id="gunungDepan" fill="#2b2850" d="M0 430 C150 380 250 440 375 400 S600 380 750 430 V500 H0Z"/>
+                <g id="pinusDepan" fill="#15122e"><use href="#pine" transform="translate(-10 330) scale(1.9)"/><use href="#pine" transform="translate(70 380) scale(1.3)"/><use href="#pine" transform="translate(150 400) scale(0.9)"/><use href="#pine" transform="translate(590 400) scale(0.9)"/><use href="#pine" transform="translate(650 375) scale(1.4)"/><use href="#pine" transform="translate(715 320) scale(2)"/></g>
+            </svg>
 
+            <!-- Judul SUPERMAN (animasi huruf per huruf) -->
+            <h1 class="hero-fit-title" id="heroTitle">SUPERMAN</h1>
+
+            <!-- Konten Hero: Keywords, Headline, Body, Tombol, Footer -->
             <div class="hero-copy" id="heroCopy">
                 <div class="hero-keywords">
                     <span>Kuat</span>
@@ -61,11 +85,49 @@
                 </div>
             </div>
 
+            <div class="scenery-hint" id="sceneHint">Scroll Down<span>⌄</span></div>
+            <div class="scenery-hint scenery-hint-akhir" id="sceneHintAkhir"><span>⌃</span>Scroll Back</div>
         </div>
-        <!-- TUTUP PEMBUNGKUS DI SINI -->
-
     </section>
 
+    <!-- SCENERY SCROLL ANIMATION (DITARUH DI LUAR HERO POSTER) -->
+    <section class="scenery" aria-label="Pemandangan markas Superman">
+        <div class="scenery-pin">
+            <h2 class="scenery-judul" id="sceneJudul">Markas Superman</h2>
+            <svg class="scenery-svg" viewBox="0 0 750 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gSiang" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#9c536b"/><stop offset=".55" stop-color="#e98a84"/><stop offset="1" stop-color="#ffcba6"/>
+                    </linearGradient>
+                    <linearGradient id="gMalam" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#090618"/><stop offset="1" stop-color="#3b1f5e"/>
+                    </linearGradient>
+                    <radialGradient id="gMatahari"><stop offset="0" stop-color="#fffbb0"/><stop offset=".7" stop-color="#ffe94a"/><stop offset="1" stop-color="#ffd21f"/></radialGradient>
+                    <g id="pine"><polygon points="20,0 34,36 6,36"/><polygon points="20,22 38,64 2,64"/><polygon points="20,48 42,96 -2,96"/><rect x="18" y="96" width="4" height="12"/></g>
+                    <path id="burung" d="M0 0 q6 -8 12 0 q6 -8 12 0 q-6 4 -12 4 q-6 0 -12 -4z"/>
+                </defs>
+                <rect id="langitSiang" width="750" height="500" fill="url(#gSiang)"/>
+                <rect id="langitMalam" width="750" height="500" fill="url(#gMalam)" opacity="0"/>
+                <g id="bintang" opacity="0"></g>
+                <g id="matahari"><circle r="70" fill="#fff3a0" opacity=".35"/><circle r="55" fill="url(#gMatahari)"/></g>
+                <g id="awan" fill="#fff" opacity=".9">
+                    <g transform="translate(560 120)"><ellipse rx="40" ry="11"/><ellipse cx="-14" cy="-8" rx="20" ry="11"/><ellipse cx="14" cy="-6" rx="16" ry="9"/></g>
+                    <g transform="translate(120 170)"><ellipse rx="34" ry="9"/><ellipse cx="-10" cy="-7" rx="16" ry="9"/></g>
+                    <g transform="translate(690 210)"><ellipse rx="30" ry="8"/><ellipse cx="8" cy="-6" rx="14" ry="8"/></g>
+                </g>
+                <g id="burungGrup" fill="#2a1f45">
+                    <use href="#burung" x="40" y="120"/><use href="#burung" x="80" y="90"/><use href="#burung" x="120" y="135"/><use href="#burung" x="70" y="160"/>
+                </g>
+                <path id="gunungBelakang" fill="#8a6e95" d="M0 330 L90 270 L170 320 L260 240 L370 330 L470 270 L560 330 L660 250 L750 310 V500 H0Z"/>
+                <g id="pinusBelakang" fill="#5a4a7e"><use href="#pine" transform="translate(20 330) scale(0.9)"/><use href="#pine" transform="translate(110 345) scale(0.8)"/><use href="#pine" transform="translate(210 335) scale(0.7)"/><use href="#pine" transform="translate(300 350) scale(0.6)"/><use href="#pine" transform="translate(450 350) scale(0.6)"/><use href="#pine" transform="translate(540 335) scale(0.8)"/><use href="#pine" transform="translate(640 345) scale(0.9)"/><use href="#pine" transform="translate(710 330) scale(0.8)"/></g>
+                <path id="gunungTengah" fill="#433d6c" d="M0 380 L120 310 L230 370 L340 300 L450 380 L560 320 L670 385 L750 340 V500 H0Z"/>
+                <path id="gunungDepan" fill="#2b2850" d="M0 430 C150 380 250 440 375 400 S600 380 750 430 V500 H0Z"/>
+                <g id="pinusDepan" fill="#15122e"><use href="#pine" transform="translate(-10 330) scale(1.9)"/><use href="#pine" transform="translate(70 380) scale(1.3)"/><use href="#pine" transform="translate(150 400) scale(0.9)"/><use href="#pine" transform="translate(590 400) scale(0.9)"/><use href="#pine" transform="translate(650 375) scale(1.4)"/><use href="#pine" transform="translate(715 320) scale(2)"/></g>
+            </svg>
+            <div class="scenery-hint" id="sceneHint">Scroll Down<span>⌄</span></div>
+            <div class="scenery-hint scenery-hint-akhir" id="sceneHintAkhir"><span>⌃</span>Scroll Back</div>
+        </div>
+    </section>
     <!-- KARTU MISI -->
     <section class="misi" id="misi" data-aos="fade-up">
         <h2 class="judul-misi">Chose your role hero</h2>
@@ -115,9 +177,13 @@
     </footer>
 
     <button id="backToTop" title="Kembali ke atas">↑</button>
-
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>AOS.init();</script>
+    
+    <!-- GSAP + ScrollTrigger (WAJIB DIMUAT SEBELUM scenery.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="scenery.js"></script>
 </body>
 </html>

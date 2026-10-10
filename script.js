@@ -72,61 +72,7 @@ if (tombolAtas) {
 }
 
 // =========================================
-// 5. HERO POSTER: Judul + Kucing muncul saat scroll
-// =========================================
-const heroTrack = document.getElementById("heroPosterTrack");
-
-if (heroTrack) {
-    const heroTitle = document.getElementById("heroTitle");
-    const heroCopy = document.getElementById("heroCopy");
-    const heroForeground = document.querySelector(".hero-foreground");
-
-    // Pecah judul jadi per-huruf
-    const teksJudul = heroTitle.textContent;
-    heroTitle.innerHTML = "";
-    const daftarSpan = [];
-    teksJudul.split("").forEach(function(huruf) {
-        const span = document.createElement("span");
-        span.textContent = huruf === " " ? "\u00A0" : huruf;
-        heroTitle.appendChild(span);
-        daftarSpan.push(span);
-    });
-
-    function updateHeroPoster() {
-        const rect = heroTrack.getBoundingClientRect();
-        const bisaDiScroll = heroTrack.offsetHeight - window.innerHeight;
-        let progress = bisaDiScroll > 0 ? (-rect.top) / bisaDiScroll : 0;
-        progress = Math.min(1, Math.max(0, progress));
-
-        // 1. Munculkan huruf judul satu-satu (progress 0% - 50%)
-        daftarSpan.forEach(function(span, i) {
-            const mulai = (i / daftarSpan.length) * 0.5;
-            let t = (progress - mulai) / 0.4;
-            t = Math.min(1, Math.max(0, t));
-            span.style.opacity = t;
-            span.style.transform = "translateY(" + (1 - t) * 20 + "px)";
-        });
-
-        // 2. Munculkan kucingnya (progress 20% - 60%)
-        if (heroForeground) {
-            let progressCat = (progress - 0.2) / 0.4;
-            progressCat = Math.min(1, Math.max(0, progressCat));
-            heroForeground.style.opacity = progressCat;
-            heroForeground.style.transform = "translateY(" + (1 - progressCat) * 50 + "px)";
-        }
-
-        // 3. Panel teks naik dari bawah (progress 55% - 95%)
-        let progressPanel = (progress - 0.55) / 0.4;
-        progressPanel = Math.min(1, Math.max(0, progressPanel));
-        heroCopy.style.transform = "translateY(" + (1 - progressPanel) * 100 + "%)";
-    }
-
-    window.addEventListener("scroll", updateHeroPoster, { passive: true });
-    window.addEventListener("resize", updateHeroPoster);
-    updateHeroPoster();
-}
-// =========================================
-// 6. FORM KONTAK (Kirim ke Formspree)
+// 5. FORM KONTAK (Kirim ke Formspree)
 // =========================================
 const formKontak = document.getElementById("formKontak");
 
@@ -166,7 +112,7 @@ if (formKontak) {
     });
 }
 // =========================================
-// 7. MESIN CETAK BERITA (Dynamic Rendering)
+// 6. MESIN CETAK BERITA (Dynamic Rendering)
 // =========================================
 
 // 1. Ini dia "Buku Catatan" datanya. Kamu bisa nambah atau ngurangi di sini.
